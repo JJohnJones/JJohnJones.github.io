@@ -35,15 +35,58 @@ body {
     min-height: 100vh;
 }
 
-.header, .footer {
+.header {
     background-color: var(--foreground-color);
     padding: 1rem;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    font-size: 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0 1rem;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
 .hero {
     flex: 1;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     padding: 2rem;
+    justify-content: space-between;
+}
+
+.hero-left {
+    float: left;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
+.hero img {
+    max-width: 40%;
+    border-radius: 3%;
+    height: auto;
+    float: right;
 }
 
 .about, .projects, .contact {
@@ -51,23 +94,24 @@ body {
     border-bottom: 1px solid var(--foreground-color);
 }
 
-.nav {
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 95%);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: var(--foreground-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
-    height: 44px;
-}
-
-.nav a {
-    color: var(--font-color);
-    text-decoration: none;
-    margin: 0 1rem;
-}
-
-.nav a:hover {
-    text-decoration: underline;
 }
 
 .footer {
+    background-color: var(--foreground-color);
+    padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
 }
