@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root {
-    --foreground-color: ;
-    --background-color: ;
-    --font-color: ;
-    --accent-color: ;
+    --foreground-color: #acb0be;
+    --background-color: #eff1f5;
+    --font-color: #4c4f69;
+    --accent-color: #e64553;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-color: ;
-        --background-color: ;
-        --font-color: ;
-        --accent-color: ;
+        --foreground-color: #585b70;
+        --background-color: #1e1e2e;
+        --font-color: #cdd6f4;
+        --accent-color: #f38ba8;
     }
 }
 
@@ -21,7 +23,8 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Source Code Pro', 'Arial', sans-serif;
+    font-weight: 500;
     background-color: var(--background-color);
     color: var(--font-color);
 }
@@ -51,6 +54,7 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    height: 44px;
 }
 
 .nav a {
