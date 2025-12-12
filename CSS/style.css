@@ -1,0 +1,70 @@
+:root {
+    --foreground-color: ;
+    --background-color: ;
+    --font-color: ;
+    --accent-color: ;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-color: ;
+        --background-color: ;
+        --font-color: ;
+        --accent-color: ;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: var(--foreground-color);
+    padding: 1rem;
+}
+
+.hero {
+    flex: 1;
+    background-color: var(--accent-color);
+    padding: 2rem;
+}
+
+.about, .projects, .contact {
+    padding: 2rem;
+    border-bottom: 1px solid var(--foreground-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
