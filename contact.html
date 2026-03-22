@@ -112,7 +112,7 @@
                     class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-12 text-center text-on-surface">
                     CONTACT <span class="italic text-primary-dim">ME</span></h1>
 
-                <form
+                <form action="https://formspree.io/f/xqeyvegr" method="POST"
                     class="bg-surface-container-high p-8 md:p-12 rounded-xl border border-outline/10 shadow-2xl space-y-8 relative overflow-hidden group">
                     <!-- Decorative element -->
                     <div
@@ -128,23 +128,23 @@
                                 for="name">Name</label>
                             <input
                                 class="w-full bg-surface-container-low border border-outline/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body focus:outline-none focus:ring-0 focus:border-outline/30"
-                                id="name" placeholder="John Doe" required type="text" />
+                                id="name" name="name" placeholder="John Doe" required type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant block"
                                 for="email">Email address</label>
                             <input
                                 class="w-full bg-surface-container-low border border-outline/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body focus:outline-none focus:ring-0 focus:border-outline/30"
-                                id="email" placeholder="johndoe@example.com" required type="email" />
+                                id="email" name="email" placeholder="johndoe@example.com" required type="email" />
                         </div>
                     </div>
 
                     <div class="space-y-2 relative z-10">
                         <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant block"
                             for="subject">Subject</label>
-                        <input
-                            class="w-full bg-surface-container-low border border-outline/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body focus:outline-none focus:ring-0 focus:border-outline/30"
-                            id="subject" placeholder="Project Inquiry" type="text" />
+                            <input
+                                class="w-full bg-surface-container-low border border-outline/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body focus:outline-none focus:ring-0 focus:border-outline/30"
+                                id="subject" name="subject" placeholder="Project Inquiry" type="text" />
                     </div>
 
                     <div class="space-y-2 relative z-10">
@@ -152,7 +152,7 @@
                             for="message">Message</label>
                         <textarea
                             class="w-full bg-surface-container-low border border-outline/30 rounded-DEFAULT px-4 py-3 text-on-surface font-body focus:outline-none focus:ring-0 focus:border-outline/30 min-h-[160px] resize-y"
-                            id="message" placeholder="Describe your project requirements here..."></textarea>
+                            id="message" name="message" placeholder="Describe your project requirements here..."></textarea>
                     </div>
 
                     <button
