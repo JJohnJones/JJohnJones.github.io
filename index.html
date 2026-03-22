@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>John Jones Portfolio</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts: Newsreader for serif elegance, Space Grotesk for technical precision -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "rgb(var(--color-primary) / <alpha-value>)",
+                        "primary-dim": "rgb(var(--color-primary-dim) / <alpha-value>)",
+                        "on-primary": "rgb(var(--color-on-primary) / <alpha-value>)",
+                        "surface": "rgb(var(--color-surface) / <alpha-value>)",
+                        "surface-container": "rgb(var(--color-surface-container) / <alpha-value>)",
+                        "surface-container-high": "rgb(var(--color-surface-container-high) / <alpha-value>)",
+                        "surface-container-low": "rgb(var(--color-surface-container-low) / <alpha-value>)",
+                        "on-surface": "rgb(var(--color-on-surface) / <alpha-value>)",
+                        "on-surface-variant": "rgb(var(--color-on-surface-variant) / <alpha-value>)",
+                        "outline": "rgb(var(--color-outline) / <alpha-value>)",
+                        "outline-variant": "rgb(var(--color-outline-variant) / <alpha-value>)",
+                        "background": "rgb(var(--color-background) / <alpha-value>)"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "1.5rem" },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20 transition-colors duration-500">
+    <!-- Header / TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface-container-high/95 shadow-lg shadow-black/10 backdrop-blur-xl border-b border-outline/30 transition-colors duration-500">
+        <nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+            <a href="#hero" class="font-headline text-2xl font-bold tracking-tight text-primary font-serif">
+                JOHN JONES
+            </a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="nav-link text-lg text-on-surface-variant border-b-2 border-primary pb-1 font-medium text-primary transition-colors duration-300"
+                    href="#about">About</a>
+                <a class="nav-link text-lg text-on-surface-variant border-b-2 border-transparent pb-1 font-medium hover:text-primary transition-colors duration-300"
+                    href="#work">Work</a>
+                <a class="nav-link text-lg text-on-surface-variant border-b-2 border-transparent pb-1 font-medium hover:text-primary transition-colors duration-300"
+                    href="#contact">Contact</a>
+                <a class="nav-link text-lg text-on-surface-variant border-b-2 border-transparent pb-1 font-medium hover:text-primary transition-colors duration-300"
+                    href="media/JohnJones_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden md:flex items-center justify-center bg-surface-container text-primary border border-primary/30 px-6 py-2 rounded-DEFAULT font-label uppercase tracking-widest text-sm hover:bg-surface-container-high hover:text-primary transition-all duration-300 active:scale-95">
+                    Connect
+                </a>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode"
+                    class="text-primary hover:text-on-surface transition-colors focus:outline-none flex items-center justify-center p-2 bg-surface-container rounded-full border border-outline/30">
+                    <span id="theme-icon" class="material-symbols-outlined text-xl">light_mode</span>
+                </button>
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-menu-btn" aria-label="Toggle menu"
+                    class="md:hidden text-primary focus:outline-none flex items-center justify-center p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu"
+            class="md:hidden absolute top-[100%] left-0 w-full bg-surface-container-high/95 shadow-xl shadow-black/10 backdrop-blur-xl border-b border-outline/30 overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+            <div class="flex flex-col items-center py-8 gap-6 font-label text-base uppercase tracking-widest">
+                <a class="mobile-nav-link text-primary hover:text-on-surface transition-colors" href="#about">About</a>
+                <a class="mobile-nav-link text-primary hover:text-on-surface transition-colors" href="#work">Work</a>
+                <a class="mobile-nav-link text-primary hover:text-on-surface transition-colors"
+                    href="#contact">Contact</a>
+                <a class="mobile-nav-link text-primary hover:text-on-surface transition-colors"
+                    href="media/JohnJones_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="contact.html"
+                    class="flex items-center justify-center bg-surface-container text-primary border border-primary/30 px-6 py-2 rounded-DEFAULT font-label uppercase text-sm w-[200px] hover:bg-surface-container-high hover:text-primary active:scale-95 transition-all">Connect</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="min-h-screen flex flex-col justify-center px-8 max-w-7xl mx-auto pt-36 pb-20 md:pt-40">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mt-12 lg:mt-0">
+                <div class="lg:col-span-7 z-10">
+                    <span class="font-label text-primary uppercase tracking-[0.4em] mb-6 block text-xs">Electrical
+                        Engineer &amp; CS Minor</span>
+                    <h1
+                        class="font-headline text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.85] tracking-tighter mb-8 -ml-1 text-on-surface">
+                        JOHN<br /><span class="italic text-primary-dim">JONES</span>
+                    </h1>
+                    <p
+                        class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed mb-12 font-light">
+                        Designing at the intersection of physical hardware and elegant software. Building robust,
+                        craftsman-grade technical systems.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                        <a href="#about"
+                            class="bg-primary text-on-primary px-8 py-4 rounded-DEFAULT font-label uppercase tracking-widest text-sm flex items-center gap-3 hover:bg-primary-dim hover:scale-105 hover:shadow-primary/30 transition-all duration-300 shadow-lg shadow-primary/10 active:scale-[0.98]">
+                            MORE ABOUT ME
+                            <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                        </a>
+                        <!--
+                        <div class="flex flex-col border-l border-outline/30 pl-6">
+                            <span
+                                class="font-label text-[10px] text-on-surface-variant/60 tracking-[0.2em] uppercase mb-1">Current
+                                Focus</span>
+                            <span class="font-label text-sm tracking-tight text-on-surface">Embedded Systems &amp;
+                                VLSI</span>
+                        </div>
+                    -->
+                    </div>
+                </div>
+                <div
+                    class="lg:col-span-5 relative mt-12 lg:mt-0 max-w-[280px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-full w-full">
+                    <div
+                        class="aspect-square lg:aspect-[3/4] bg-surface-container-high relative overflow-hidden rounded-lg">
+                        <img alt="John Jones" class="w-full h-full object-cover" src="images/Jones-288.jpg" />
+                        <!-- Vignette Overlay -->
+                        <div class="absolute inset-0 vignette-overlay pointer-events-none opacity-30">
+                        </div>
+                    </div>
+                    <!-- Technical Decorative Element -->
+                    <div
+                        class="absolute -bottom-6 -right-6 w-40 h-40 border-r border-b border-primary/20 hidden md:block opacity-50">
+                        <div class="absolute bottom-2 right-2 w-1 h-1 bg-primary"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Transition Blend -->
+        <div class="h-32 w-full blend-about"></div>
+
+        <!-- The Approach Section -->
+        <section class="pb-32 pt-16 px-8 bg-primary-dim/20 transition-colors duration-500" id="about">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-4">
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold sticky top-32 text-on-surface">ABOUT
+                            &amp;<br /><span class="italic text-primary">SKILLS</span></h2>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <div class="space-y-12 max-w-2xl">
+                            <p
+                                class="font-body text-xl text-on-surface leading-relaxed border-l-2 border-primary/30 pl-6">
+                                I am an Electrical Engineering student with a minor in Computer Science, dedicated to
+                                mastering the bridge between physical components and digital logic. My academic journey
+                                is fueled by a passion for creating robust, high-performance systems from the ground up.
+                            </p>
+                            <p class="font-headline text-3xl text-on-surface leading-tight font-light italic">
+                                Hardware provides the bones; software provides the soul. I bridge the two with a focus
+                                on efficiency, reliability, and <span class="text-primary not-italic">tactile
+                                    precision</span>.
+                            </p>
+                            <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                                My work is rooted in the philosophy of "The Technical Monolith." Whether I'm laying out
+                                a PCB or architecting a low-latency driver, I prioritize clean signals and robust logic.
+                                It's about building tools that feel as solid as they perform.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-8 border-t border-outline/10">
+                                <div>
+                                    <span
+                                        class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-6">Hardware
+                                        Skills</span>
+                                    <ul
+                                        class="space-y-3 font-label text-xs uppercase tracking-widest text-on-surface-variant">
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Circuit Design &amp;
+                                            PCB Layout</li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Analog Signal
+                                            Processing</li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Power Electronics
+                                        </li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Prototyping &amp;
+                                            Fabrication</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span
+                                        class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-6">Software
+                                        Skills</span>
+                                    <ul
+                                        class="space-y-3 font-label text-xs uppercase tracking-widest text-on-surface-variant">
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Embedded C/C++</li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>RTOS Architectures
+                                        </li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>FPGA / Verilog</li>
+                                        <li class="flex items-center gap-3"><span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Python Scripting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Transition Blend -->
+        <div class="h-32 w-full blend-work"></div>
+
+        <!-- Technical Portfolio (Bento Grid) -->
+        <section class="pb-32 pt-16 px-8 bg-surface transition-colors duration-500" id="work">
+            <div class="max-w-7xl mx-auto mb-20">
+                <span class="font-label text-primary uppercase tracking-[0.4em] mb-4 block text-xs">Project
+                    Archive</span>
+                <h2
+                    class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-on-surface">
+                    TECHNICAL <span class="italic font-light opacity-50">PORTFOLIO</span></h2>
+            </div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Project 1: Make OHIO 2025 -->
+                <a href="https://github.com/sonicunleshed/UniversalTranslator" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-8 block group cursor-pointer">
+                    <div
+                        class="aspect-[16/9] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
+                        <img alt="Make OHIO 2025"
+                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" />
+                        <div
+                            class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                            HACKATHON • 2025
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3
+                                class="font-serif text-3xl font-medium mb-2 uppercase text-on-surface flex items-center gap-2">
+                                "The Universal Translator"
+                                <span
+                                    class="material-symbols-outlined text-primary text-2xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                            </h3>
+                            <p class="font-body text-on-surface-variant max-w-md">Make OHIO 2025 hardware and software
+                                integration project.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: Make OHIO 2026 -->
+                <a href="https://github.com/creemy0cheesekake/makeohio2026" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-4 block group cursor-pointer">
+                    <div
+                        class="aspect-video md:aspect-[4/5] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
+                        <img alt="Coral Awareness"
+                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80" />
+                        <div
+                            class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                            HACKATHON • 2026
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium mb-2 uppercase text-on-surface flex items-center gap-2">
+                        Coral Awareness Demonstration
+                        <span
+                            class="material-symbols-outlined text-primary text-xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                    </h3>
+                    <p class="font-body text-on-surface-variant">Make OHIO 2026 environmental hardware project.</p>
+                </a>
+
+                <!-- Project 3: Simple Estate Solutions -->
+                <div class="md:col-span-4 group cursor-pointer mt-12 md:mt-16">
+                    <div
+                        class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
+                        <img alt="Estate Solutions"
+                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" />
+                        <div
+                            class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                            WEB • FULLSTACK</div>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium mb-2 uppercase text-on-surface flex items-center gap-2">
+                        Simple Estate Solutions
+                        <span
+                            class="material-symbols-outlined text-primary text-xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                    </h3>
+                    <p class="font-body text-on-surface-variant">Comprehensive business landing page and consultation
+                        suite.</p>
+                </div>
+
+                <!-- Project 4: Your Adventure Golf -->
+                <a href="https://github.com/CadenConde/My-Golf-Site" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-4 block group cursor-pointer mt-12 md:mt-16">
+                    <div
+                        class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
+                        <img alt="Adventure Golf"
+                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            src="https://picsum.photos/seed/golf/800/800" />
+                        <div
+                            class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                            WEB • FRONTEND</div>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium mb-2 uppercase text-on-surface flex items-center gap-2">
+                        Your Adventure Golf
+                        <span
+                            class="material-symbols-outlined text-primary text-xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                    </h3>
+                    <p class="font-body text-on-surface-variant">Vibrant recreational booking and course exploration
+                        website.</p>
+                </a>
+
+                <!-- Project 5: CTF -->
+                <a href="https://ctftime.org/team/404715" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-4 block group cursor-pointer mt-12 md:mt-16">
+                    <div
+                        class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
+                        <img alt="CTF Challenges"
+                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" />
+                        <div
+                            class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                            CYBERSECURITY</div>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium mb-2 uppercase text-on-surface flex items-center gap-2">
+                        CTF Challenges
+                        <span
+                            class="material-symbols-outlined text-primary text-xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                    </h3>
+                    <p class="font-body text-on-surface-variant">Assorted Capture The Flag scenarios targeting
+                        penetration testing.</p>
+                </a>
+
+                <!-- Project 6: Portfolio Website -->
+                <a href="https://github.com/JJohnJones/JJohnJones-JJohnJones.github.io" target="_blank"
+                    rel="noopener noreferrer" class="md:col-span-12 block group cursor-pointer mt-12 md:mt-24">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 md:order-1">
+                            <h3
+                                class="font-serif text-4xl font-medium mb-4 uppercase text-on-surface flex items-center gap-2">
+                                Portfolio Website
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
+                            </h3>
+                            <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 max-w-lg">
+                                The ground-up architectural framework underlying this exact website. Built using vanilla
+                                JS, highly customized Tailwind configurations, and completely localized assets.
+                            </p>
+                            <span
+                                class="relative font-label uppercase tracking-widest text-primary text-sm oxide-underline inline-block pb-1">View
+                                Source Code</span>
+                        </div>
+                        <div
+                            class="aspect-video overflow-hidden bg-surface-container order-1 md:order-2 rounded-lg border border-outline/5 relative">
+                            <img alt="Portfolio Website"
+                                class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" />
+                            <div
+                                class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
+                                WEB • DESIGN SYSTEM
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Dynamic Transition Blend -->
+        <div class="h-32 w-full blend-contact"></div>
+
+        <!-- Workbench / Contact Section -->
+        <section class="pb-32 pt-16 px-8 bg-primary-dim/20 transition-colors duration-500" id="contact">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2
+                    class="font-headline text-4xl sm:text-5xl md:text-7xl font-bold mb-20 tracking-tight text-on-surface">
+                    ENGINEERED
+                    FOR<br /><span class="text-primary italic font-light">EXCELLENCE</span></h2>
+                <div
+                    class="relative max-w-4xl mx-auto p-12 bg-surface-container-high rounded-xl border border-outline/10 shadow-2xl overflow-hidden group">
+                    <!-- Decorative Workbench elements -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent">
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+                        <a class="flex flex-col items-center gap-4 group/item"
+                            href="https://www.linkedin.com/in/johnp-jones" target="_blank" rel="noopener noreferrer">
+                            <div
+                                class="w-20 h-20 rounded-lg bg-surface border border-outline/20 flex items-center justify-center group-hover/item:border-primary group-hover/item:bg-primary/5 transition-all duration-300">
+                                <svg class="w-9 h-9 fill-current text-on-surface-variant group-hover/item:text-primary transition-colors duration-300" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <span
+                                class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant group-hover/item:text-on-surface">LinkedIn</span>
+                        </a>
+                        <a class="flex flex-col items-center gap-4 group/item" href="https://github.com/JJohnJones" target="_blank" rel="noopener noreferrer">
+                            <div
+                                class="w-20 h-20 rounded-lg bg-surface border border-outline/20 flex items-center justify-center group-hover/item:border-primary group-hover/item:bg-primary/5 transition-all duration-300">
+                                <svg class="w-9 h-9 fill-current text-on-surface-variant group-hover/item:text-primary transition-colors duration-300" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <span
+                                class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant group-hover/item:text-on-surface">GitHub</span>
+                        </a>
+                        <a class="flex flex-col items-center gap-4 group/item" href="mailto:johnjones8323@gmail.com">
+                            <div
+                                class="w-20 h-20 rounded-lg bg-surface border border-outline/20 flex items-center justify-center group-hover/item:border-primary group-hover/item:bg-primary/5 transition-all duration-300">
+                                <span
+                                    class="material-symbols-outlined text-4xl text-on-surface-variant group-hover/item:text-primary">mail</span>
+                            </div>
+                            <span
+                                class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant group-hover/item:text-on-surface">Email</span>
+                        </a>
+                        <a class="flex flex-col items-center gap-4 group/item" href="media/JohnJones_Resume.pdf"
+                            target="_blank" rel="noopener noreferrer">
+                            <div
+                                class="w-20 h-20 rounded-lg bg-surface border border-outline/20 flex items-center justify-center group-hover/item:border-primary group-hover/item:bg-primary/5 transition-all duration-300">
+                                <svg class="w-9 h-9 fill-current text-on-surface-variant group-hover/item:text-primary transition-colors duration-300" viewBox="0 0 24 24">
+                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                </svg>
+                            </div>
+                            <span
+                                class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant group-hover/item:text-on-surface">Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary-dim/20 w-full border-t border-outline/15 transition-colors duration-500 backdrop-blur-xl">
+        <div class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+            <div class="font-label text-[0.75rem] text-primary uppercase tracking-widest mb-6 md:mb-0">
+                © 2026 John Jones. All rights reserved.
+            </div>
+            <div class="flex gap-6">
+                <!-- LinkedIn -->
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110"
+                    href="https://www.linkedin.com/in/johnp-jones" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <!-- GitHub -->
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110"
+                    href="https://github.com/JJohnJones" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <!-- Email -->
+                <a class="text-on-surface-variant hover:text-primary transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110"
+                    href="mailto:johnjones8323@gmail.com" title="Email">
+                    <span class="material-symbols-outlined text-3xl">mail</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom Technical Cursor Element -->
+    <div class="technical-cursor" id="cursor"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
