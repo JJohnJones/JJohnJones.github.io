@@ -24,7 +24,7 @@ html {
 
 html.dark {
     --color-primary: 187 199 223;
-    --color-primary-dim: 100 123 158;
+    --color-primary-dim: 150 173 208;
     --color-on-primary: 13 19 33;
     --color-surface: 13 19 33;
     --color-surface-container: 21 27 42;
