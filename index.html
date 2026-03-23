@@ -163,12 +163,10 @@
             </div>
         </section>
 
-        <!-- Dynamic Transition Blend -->
-        <div class="h-32 w-full blend-about"></div>
 
         <!-- The Approach Section -->
-        <section class="pb-32 pt-16 px-8 bg-primary-dim/20 transition-colors duration-500" id="about">
-            <div class="max-w-7xl mx-auto">
+        <section class="pb-32 pt-16 px-8 bg-surface transition-colors duration-500 technical-grid" id="about">
+            <div class="max-w-7xl mx-auto relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                     <div class="lg:col-span-4">
                         <h2 class="font-headline text-4xl md:text-5xl font-bold sticky top-32 text-on-surface">ABOUT
@@ -198,19 +196,31 @@
                                         class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-6">Hardware
                                         Skills</span>
                                     <ul
-                                        class="space-y-3 font-label text-xs uppercase tracking-widest text-on-surface-variant">
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Circuit Design &amp;
-                                            PCB Layout</li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Analog Signal
-                                            Processing</li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Power Electronics
+                                        class="grid grid-cols-1 gap-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Circuit Design &amp; PCB Layout
                                         </li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Prototyping &amp;
-                                            Fabrication</li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Analog Signal Processing
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Power Electronics
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Prototyping &amp; Fabrication
+                                        </li>
                                     </ul>
                                 </div>
                                 <div>
@@ -218,16 +228,31 @@
                                         class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-6">Software
                                         Skills</span>
                                     <ul
-                                        class="space-y-3 font-label text-xs uppercase tracking-widest text-on-surface-variant">
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Embedded C/C++</li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>RTOS Architectures
+                                        class="grid grid-cols-1 gap-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Embedded C/C++
                                         </li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>FPGA / Verilog</li>
-                                        <li class="flex items-center gap-3"><span
-                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45"></span>Python Scripting</li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            RTOS Architectures
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            FPGA / Verilog
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-3 bg-surface-container/30 border border-outline/10 px-4 py-2 rounded-sm group/skill hover:border-primary/30 transition-colors">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-primary/40 rotate-45 group-hover/skill:bg-primary transition-colors"></span>
+                                            Python Scripting
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -237,8 +262,6 @@
             </div>
         </section>
 
-        <!-- Dynamic Transition Blend -->
-        <div class="h-32 w-full blend-work"></div>
 
         <!-- Technical Portfolio (Bento Grid) -->
         <section class="pb-32 pt-16 px-8 bg-surface transition-colors duration-500" id="work">
@@ -252,12 +275,12 @@
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
                 <!-- Project 1: Make OHIO 2025 -->
                 <a href="https://github.com/sonicunleshed/UniversalTranslator" target="_blank" rel="noopener noreferrer"
-                    class="md:col-span-8 block group cursor-pointer">
+                    class="md:col-span-8 block group">
                     <div
                         class="aspect-[16/9] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Make OHIO 2025"
-                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" />
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                            src="images/universal_translator.png" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2025
@@ -279,12 +302,12 @@
 
                 <!-- Project 2: Make OHIO 2026 -->
                 <a href="https://github.com/creemy0cheesekake/makeohio2026" target="_blank" rel="noopener noreferrer"
-                    class="md:col-span-4 block group cursor-pointer">
+                    class="md:col-span-4 block group">
                     <div
                         class="aspect-video md:aspect-[4/5] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Coral Awareness"
-                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                            src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80" />
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                            src="images/coral.png" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2026
@@ -299,12 +322,12 @@
                 </a>
 
                 <!-- Project 3: Simple Estate Solutions -->
-                <div class="md:col-span-4 group cursor-pointer mt-12 md:mt-16">
+                <div class="md:col-span-4 group mt-12 md:mt-16">
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Estate Solutions"
-                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" />
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                            src="images/estate.jpg" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FULLSTACK</div>
@@ -320,12 +343,12 @@
 
                 <!-- Project 4: Your Adventure Golf -->
                 <a href="https://github.com/CadenConde/My-Golf-Site" target="_blank" rel="noopener noreferrer"
-                    class="md:col-span-4 block group cursor-pointer mt-12 md:mt-16">
+                    class="md:col-span-4 block group mt-12 md:mt-16">
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Adventure Golf"
-                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                            src="https://picsum.photos/seed/golf/800/800" />
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                            src="images/mini_golf.jpg" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FRONTEND</div>
@@ -341,12 +364,12 @@
 
                 <!-- Project 5: CTF -->
                 <a href="https://ctftime.org/team/404715" target="_blank" rel="noopener noreferrer"
-                    class="md:col-span-4 block group cursor-pointer mt-12 md:mt-16">
+                    class="md:col-span-4 block group mt-12 md:mt-16">
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="CTF Challenges"
-                            class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" />
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                            src="images/ctf.jpg" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             CYBERSECURITY</div>
@@ -362,7 +385,7 @@
 
                 <!-- Project 6: Portfolio Website -->
                 <a href="https://github.com/JJohnJones/JJohnJones-JJohnJones.github.io" target="_blank"
-                    rel="noopener noreferrer" class="md:col-span-12 block group cursor-pointer mt-12 md:mt-24">
+                    rel="noopener noreferrer" class="md:col-span-12 block group mt-12 md:mt-24">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div class="order-2 md:order-1">
                             <h3
@@ -382,8 +405,8 @@
                         <div
                             class="aspect-video overflow-hidden bg-surface-container order-1 md:order-2 rounded-lg border border-outline/5 relative">
                             <img alt="Portfolio Website"
-                                class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" />
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                                src="images/portfolio.png" />
                             <div
                                 class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                                 WEB • DESIGN SYSTEM
@@ -394,12 +417,15 @@
             </div>
         </section>
 
-        <!-- Dynamic Transition Blend -->
-        <div class="h-32 w-full blend-contact"></div>
 
         <!-- Workbench / Contact Section -->
-        <section class="pb-32 pt-16 px-8 bg-primary-dim/20 transition-colors duration-500" id="contact">
-            <div class="max-w-7xl mx-auto text-center">
+        <section class="pb-32 pt-16 px-8 bg-surface transition-colors duration-500 blueprint-grid" id="contact">
+            <!-- Blueprint Corner Markers -->
+            <div class="corner-mark corner-tl"></div>
+            <div class="corner-mark corner-tr"></div>
+            <div class="corner-mark corner-bl"></div>
+            <div class="corner-mark corner-br"></div>
+            <div class="max-w-7xl mx-auto text-center relative z-10">
                 <h2
                     class="font-headline text-4xl sm:text-5xl md:text-7xl font-bold mb-20 tracking-tight text-on-surface">
                     ENGINEERED
@@ -465,7 +491,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-primary-dim/20 w-full border-t border-outline/15 transition-colors duration-500 backdrop-blur-xl">
+    <footer class="bg-surface w-full border-t border-outline/15 transition-colors duration-500 backdrop-blur-xl">
         <div class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
             <div class="font-label text-[0.75rem] text-primary uppercase tracking-widest mb-6 md:mb-0">
                 © 2026 John Jones. All rights reserved.

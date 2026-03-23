@@ -1,6 +1,11 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    cursor: none;
+}
+
+a, button, input, textarea, [role="button"] {
+    cursor: none !important;
 }
 
 .material-symbols-outlined {
@@ -11,7 +16,7 @@ html {
     --color-primary: 30 41 59;
     --color-primary-dim: 71 85 105;
     --color-on-primary: 255 255 255;
-    --color-surface: 255 255 255;
+    --color-surface: 228 230 232;
     --color-surface-container: 226 232 240;
     --color-surface-container-high: 233 238 243;
     --color-surface-container-low: 255 255 255;
@@ -38,9 +43,9 @@ html.dark {
 }
 
 .technical-cursor {
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid rgb(var(--color-primary) / 0.3);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid rgb(var(--color-primary) / 0.3);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -61,8 +66,8 @@ html.dark {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     background: rgb(var(--color-primary));
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -97,14 +102,71 @@ html.dark {
     background-image: linear-gradient(to top, rgb(var(--color-surface)) 0%, transparent 50%);
 }
 
-.blend-about {
-    background-image: linear-gradient(to bottom, rgb(var(--color-surface)), rgb(var(--color-primary-dim) / 0.2));
+.technical-grid {
+    position: relative;
+    overflow: hidden;
 }
 
-.blend-work {
-    background-image: linear-gradient(to bottom, rgb(var(--color-primary-dim) / 0.2), rgb(var(--color-surface)));
+.technical-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgb(var(--color-primary) / 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(var(--color-primary) / 0.12) 1px, transparent 1px),
+        radial-gradient(rgb(var(--color-primary) / 0.15) 1.5px, transparent 1.5px);
+    background-size: 40px 40px, 40px 40px, 40px 40px;
+    background-position: 0 0, 0 0, 20px 20px;
+    mask-image: radial-gradient(circle at center, black, transparent 90%);
+    pointer-events: none;
+    z-index: 0;
 }
 
-.blend-contact {
-    background-image: linear-gradient(to bottom, rgb(var(--color-surface)), rgb(var(--color-primary-dim) / 0.2));
+.blueprint-grid {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(var(--color-surface));
 }
+
+.blueprint-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgb(var(--color-primary) / 0.1) 2px, transparent 2px),
+        linear-gradient(to bottom, rgb(var(--color-primary) / 0.1) 2px, transparent 2px),
+        linear-gradient(to right, rgb(var(--color-primary) / 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(var(--color-primary) / 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    mask-image: radial-gradient(circle at center, black, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.blueprint-grid::after {
+    content: 'REF: SECTION_CONTACT / 39.9612° N, 82.9988° W';
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-family: var(--font-headline);
+    font-size: 0.6rem;
+    color: rgb(var(--color-primary) / 0.15);
+    letter-spacing: 0.2em;
+    pointer-events: none;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+}
+
+.blueprint-grid .corner-mark {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(var(--color-primary) / 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.blueprint-grid .corner-tl { top: 2rem; left: 2rem; border-right: 0; border-bottom: 0; }
+.blueprint-grid .corner-tr { top: 2rem; right: 2rem; border-left: 0; border-bottom: 0; }
+.blueprint-grid .corner-bl { bottom: 2rem; left: 2rem; border-right: 0; border-top: 0; }
+.blueprint-grid .corner-br { bottom: 2rem; right: 2rem; border-left: 0; border-top: 0; }
