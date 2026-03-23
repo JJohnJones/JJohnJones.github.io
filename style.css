@@ -104,7 +104,6 @@ html.dark {
 
 .technical-grid {
     position: relative;
-    overflow: hidden;
 }
 
 .technical-grid::before {
