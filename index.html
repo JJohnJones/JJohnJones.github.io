@@ -3,59 +3,37 @@
 <html lang="en" class="dark">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNX6C6PVZQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VNX6C6PVZQ');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>John Jones Portfolio</title>
+    <meta name="description"
+        content="John Jones is an Electrical Engineer and CS Minor dedicated to mastering the bridge between physical hardware and digital software systems.">
     <!-- Material Symbols -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <!-- Google Fonts: Newsreader for serif elegance, Space Grotesk for technical precision -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "rgb(var(--color-primary) / <alpha-value>)",
-                        "primary-dim": "rgb(var(--color-primary-dim) / <alpha-value>)",
-                        "on-primary": "rgb(var(--color-on-primary) / <alpha-value>)",
-                        "surface": "rgb(var(--color-surface) / <alpha-value>)",
-                        "surface-container": "rgb(var(--color-surface-container) / <alpha-value>)",
-                        "surface-container-high": "rgb(var(--color-surface-container-high) / <alpha-value>)",
-                        "surface-container-low": "rgb(var(--color-surface-container-low) / <alpha-value>)",
-                        "on-surface": "rgb(var(--color-on-surface) / <alpha-value>)",
-                        "on-surface-variant": "rgb(var(--color-on-surface-variant) / <alpha-value>)",
-                        "outline": "rgb(var(--color-outline) / <alpha-value>)",
-                        "outline-variant": "rgb(var(--color-outline-variant) / <alpha-value>)",
-                        "background": "rgb(var(--color-background) / <alpha-value>)"
-                    },
-                    fontFamily: {
-                        "headline": ["Newsreader", "serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                        "label": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "1.5rem" },
-                },
-            },
-        }
-    </script>
+
+
+    <link rel="preload" as="image" href="images/Jones-288.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNX6C6PVZQ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-VNX6C6PVZQ');
-</script>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary/20 transition-colors duration-500">
     <!-- Header / TopNavBar -->
@@ -157,7 +135,8 @@
                     class="lg:col-span-5 relative mt-12 lg:mt-0 max-w-[280px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-full w-full">
                     <div
                         class="aspect-square lg:aspect-[3/4] bg-surface-container-high relative overflow-hidden rounded-lg">
-                        <img alt="John Jones" class="w-full h-full object-cover" src="images/Jones-288.jpg" />
+                        <img alt="John Jones" class="w-full h-full object-cover" src="images/Jones-288.webp"
+                            fetchpriority="high" />
                         <!-- Vignette Overlay -->
                         <div class="absolute inset-0 vignette-overlay pointer-events-none opacity-30">
                         </div>
@@ -288,7 +267,7 @@
                         class="aspect-[16/9] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Make OHIO 2025"
                             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/universal_translator.png" />
+                            src="images/universal_translator.webp" loading="lazy" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2025
@@ -315,7 +294,7 @@
                         class="aspect-video md:aspect-[4/5] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Coral Awareness"
                             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/coral.png" />
+                            src="images/coral.webp" loading="lazy" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2026
@@ -335,7 +314,7 @@
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Estate Solutions"
                             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/estate.jpg" />
+                            src="images/estate.webp" loading="lazy" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FULLSTACK</div>
@@ -356,7 +335,7 @@
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Adventure Golf"
                             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/mini_golf.jpg" />
+                            src="images/mini_golf.webp" loading="lazy" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FRONTEND</div>
@@ -377,7 +356,7 @@
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="CTF Challenges"
                             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/ctf.jpg" />
+                            src="images/ctf.webp" loading="lazy" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             CYBERSECURITY</div>
@@ -414,7 +393,7 @@
                             class="aspect-video overflow-hidden bg-surface-container order-1 md:order-2 rounded-lg border border-outline/5 relative">
                             <img alt="Portfolio Website"
                                 class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                                src="images/portfolio.png" />
+                                src="images/portfolio.webp" loading="lazy" />
                             <div
                                 class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                                 WEB • DESIGN SYSTEM

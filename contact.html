@@ -2,59 +2,35 @@
 <html lang="en" class="dark">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNX6C6PVZQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VNX6C6PVZQ');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>John Jones Portfolio | Contact Me</title>
+    <meta name="description"
+        content="Get in touch with John Jones to discuss engineering projects, technical hardware, and robust low-level software architecture.">
     <!-- Material Symbols -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <!-- Google Fonts: Newsreader for serif elegance, Space Grotesk for technical precision -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "rgb(var(--color-primary) / <alpha-value>)",
-                        "primary-dim": "rgb(var(--color-primary-dim) / <alpha-value>)",
-                        "on-primary": "rgb(var(--color-on-primary) / <alpha-value>)",
-                        "surface": "rgb(var(--color-surface) / <alpha-value>)",
-                        "surface-container": "rgb(var(--color-surface-container) / <alpha-value>)",
-                        "surface-container-high": "rgb(var(--color-surface-container-high) / <alpha-value>)",
-                        "surface-container-low": "rgb(var(--color-surface-container-low) / <alpha-value>)",
-                        "on-surface": "rgb(var(--color-on-surface) / <alpha-value>)",
-                        "on-surface-variant": "rgb(var(--color-on-surface-variant) / <alpha-value>)",
-                        "outline": "rgb(var(--color-outline) / <alpha-value>)",
-                        "outline-variant": "rgb(var(--color-outline-variant) / <alpha-value>)",
-                        "background": "rgb(var(--color-background) / <alpha-value>)"
-                    },
-                    fontFamily: {
-                        "headline": ["Newsreader", "serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                        "label": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "1.5rem" },
-                },
-            },
-        }
-    </script>
+
+    <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNX6C6PVZQ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-VNX6C6PVZQ');
-</script>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary/20 transition-colors duration-500">
     <!-- Header / TopNavBar -->
@@ -75,7 +51,8 @@
                 <a class="nav-link text-lg text-on-surface-variant border-b-2 border-transparent pb-1 font-medium hover:text-primary transition-colors duration-300 flex items-center group"
                     href="media/JohnJones_Resume.pdf" target="_blank" rel="noopener noreferrer">
                     Resume
-                    <span class="material-symbols-outlined text-primary text-base opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ml-1">arrow_outward</span>
+                    <span
+                        class="material-symbols-outlined text-primary text-base opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ml-1">arrow_outward</span>
                 </a>
             </div>
 
@@ -111,7 +88,8 @@
                 <a class="mobile-nav-link text-primary hover:text-on-surface transition-colors flex items-center group"
                     href="media/JohnJones_Resume.pdf" target="_blank" rel="noopener noreferrer">
                     Resume
-                    <span class="material-symbols-outlined text-primary text-base opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ml-1">arrow_outward</span>
+                    <span
+                        class="material-symbols-outlined text-primary text-base opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ml-1">arrow_outward</span>
                 </a>
                 <a href="contact.html"
                     class="flex items-center justify-center bg-surface-container text-primary border border-primary/30 px-6 py-2 rounded-DEFAULT font-label uppercase text-sm w-[200px] hover:bg-surface-container-high hover:text-primary active:scale-95 transition-all">Connect</a>
@@ -125,7 +103,8 @@
         <div class="corner-mark corner-tr"></div>
         <div class="corner-mark corner-bl"></div>
         <div class="corner-mark corner-br"></div>
-        <div class="min-h-screen flex flex-col justify-center px-8 max-w-7xl mx-auto pt-12 pb-20 md:pt-16 relative z-10">
+        <div
+            class="min-h-screen flex flex-col justify-center px-8 max-w-7xl mx-auto pt-12 pb-20 md:pt-16 relative z-10">
             <div class="max-w-2xl mx-auto w-full">
                 <span class="font-label text-primary uppercase tracking-[0.4em] mb-4 block text-xs text-center">Get in
                     touch</span>
