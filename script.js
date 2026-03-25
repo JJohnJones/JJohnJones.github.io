@@ -28,12 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom Technical Cursor
     const cursor = document.getElementById('cursor');
     if (cursor) {
+        let mouseX = 0;
+        let mouseY = 0;
+
         document.addEventListener('mousemove', (e) => {
-            requestAnimationFrame(() => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         });
+
+        // Hardware-accelerated persistent render loop
+        function renderCursor() {
+            cursor.style.translate = `${mouseX}px ${mouseY}px`;
+            requestAnimationFrame(renderCursor);
+        }
+        requestAnimationFrame(renderCursor);
 
         document.querySelectorAll('a, button, .group').forEach(el => {
             el.addEventListener('mouseenter', () => {

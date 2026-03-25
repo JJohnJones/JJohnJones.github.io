@@ -137,7 +137,7 @@
                     <div
                         class="aspect-square lg:aspect-[3/4] bg-surface-container-high relative overflow-hidden rounded-lg">
                         <img alt="John Jones" class="w-full h-full object-cover" src="images/Jones-288.webp"
-                            fetchpriority="high" />
+                            fetchpriority="high" decoding="async" />
                         <!-- Vignette Overlay -->
                         <div class="absolute inset-0 vignette-overlay pointer-events-none opacity-30">
                         </div>
@@ -267,8 +267,8 @@
                     <div
                         class="aspect-[16/9] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Make OHIO 2025"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/universal_translator.webp" loading="lazy" />
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/universal_translator.webp" loading="lazy" decoding="async" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2025
@@ -294,8 +294,8 @@
                     <div
                         class="aspect-video md:aspect-[4/5] overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Coral Awareness"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/coral.webp" loading="lazy" />
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/coral.webp" loading="lazy" decoding="async" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             HACKATHON • 2026
@@ -310,12 +310,13 @@
                 </a>
 
                 <!-- Project 3: Simple Estate Solutions -->
-                <div class="md:col-span-4 group mt-12 md:mt-16">
+                <a href="https://simpleestatesohio.com" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-4 block group mt-12 md:mt-16">
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Estate Solutions"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/estate.webp" loading="lazy" />
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/estate.webp" loading="lazy" decoding="async" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FULLSTACK</div>
@@ -325,9 +326,10 @@
                         <span
                             class="material-symbols-outlined text-primary text-xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
                     </h3>
-                    <p class="font-body text-on-surface-variant">Comprehensive business landing page and consultation
+                    <p class="font-body text-on-surface-variant">Comprehensive business landing page and
+                        consultation
                         suite.</p>
-                </div>
+                </a>
 
                 <!-- Project 4: Your Adventure Golf -->
                 <a href="https://github.com/CadenConde/My-Golf-Site" target="_blank" rel="noopener noreferrer"
@@ -335,8 +337,8 @@
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="Adventure Golf"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/mini_golf.webp" loading="lazy" />
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/mini_golf.webp" loading="lazy" decoding="async" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             WEB • FRONTEND</div>
@@ -356,8 +358,8 @@
                     <div
                         class="aspect-square overflow-hidden bg-surface-container mb-6 relative border border-outline/5 rounded-lg">
                         <img alt="CTF Challenges"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                            src="images/ctf.webp" loading="lazy" />
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/ctf.webp" loading="lazy" decoding="async" />
                         <div
                             class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                             CYBERSECURITY</div>
@@ -372,8 +374,8 @@
                 </a>
 
                 <!-- Project 6: Portfolio Website -->
-                <a href="https://github.com/JJohnJones/JJohnJones-JJohnJones.github.io" target="_blank"
-                    rel="noopener noreferrer" class="md:col-span-12 block group mt-12 md:mt-24">
+                <a href="https://github.com/JJohnJones/JJohnJones.github.io" target="_blank" rel="noopener noreferrer"
+                    class="md:col-span-12 block group mt-12 md:mt-24">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div class="order-2 md:order-1">
                             <h3
@@ -383,7 +385,8 @@
                                     class="material-symbols-outlined text-primary text-3xl opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">arrow_outward</span>
                             </h3>
                             <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 max-w-lg">
-                                The ground-up architectural framework underlying this exact website. Built using vanilla
+                                The ground-up architectural framework underlying this exact website. Built using
+                                vanilla
                                 JS, highly customized Tailwind configurations, and completely localized assets.
                             </p>
                             <span
@@ -393,8 +396,8 @@
                         <div
                             class="aspect-video overflow-hidden bg-surface-container order-1 md:order-2 rounded-lg border border-outline/5 relative">
                             <img alt="Portfolio Website"
-                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                                src="images/portfolio.webp" loading="lazy" />
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="images/portfolio.webp" loading="lazy" decoding="async" />
                             <div
                                 class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-1 text-[10px] font-label uppercase tracking-widest border border-primary/20 text-primary">
                                 WEB • DESIGN SYSTEM
