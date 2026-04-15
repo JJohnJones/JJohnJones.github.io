@@ -4,7 +4,11 @@ html {
     cursor: none;
 }
 
-a, button, input, textarea, [role="button"] {
+a,
+button,
+input,
+textarea,
+[role="button"] {
     cursor: none !important;
 }
 
@@ -21,7 +25,7 @@ a, button, input, textarea, [role="button"] {
     --color-surface-container-high: 233 238 243;
     --color-surface-container-low: 255 255 255;
     --color-on-surface: 15 23 42;
-    --color-on-surface-variant: 100 116 139;
+    --color-on-surface-variant: 60 76 99;
     --color-outline: 203 213 225;
     --color-outline-variant: 226 232 240;
     --color-background: 208 210 212;
@@ -36,7 +40,7 @@ html.dark {
     --color-surface-container-high: 24 33 52;
     --color-surface-container-low: 11 16 28;
     --color-on-surface: 225 230 240;
-    --color-on-surface-variant: 148 163 184;
+    --color-on-surface-variant: 188 203 224;
     --color-outline: 68 71 77;
     --color-outline-variant: 42 49 61;
     --color-background: 13 19 33;
@@ -115,7 +119,7 @@ html.dark {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(to right, rgb(var(--color-primary) / 0.12) 1px, transparent 1px),
         linear-gradient(to bottom, rgb(var(--color-primary) / 0.12) 1px, transparent 1px),
         radial-gradient(rgb(var(--color-primary) / 0.15) 1.5px, transparent 1.5px);
@@ -136,7 +140,7 @@ html.dark {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(to right, rgb(var(--color-primary) / 0.1) 2px, transparent 2px),
         linear-gradient(to bottom, rgb(var(--color-primary) / 0.1) 2px, transparent 2px),
         linear-gradient(to right, rgb(var(--color-primary) / 0.05) 1px, transparent 1px),
@@ -170,7 +174,30 @@ html.dark {
     z-index: 1;
 }
 
-.blueprint-grid .corner-tl { top: 2rem; left: 2rem; border-right: 0; border-bottom: 0; }
-.blueprint-grid .corner-tr { top: 2rem; right: 2rem; border-left: 0; border-bottom: 0; }
-.blueprint-grid .corner-bl { bottom: 2rem; left: 2rem; border-right: 0; border-top: 0; }
-.blueprint-grid .corner-br { bottom: 2rem; right: 2rem; border-left: 0; border-top: 0; }
+.blueprint-grid .corner-tl {
+    top: 2rem;
+    left: 2rem;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.blueprint-grid .corner-tr {
+    top: 2rem;
+    right: 2rem;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.blueprint-grid .corner-bl {
+    bottom: 2rem;
+    left: 2rem;
+    border-right: 0;
+    border-top: 0;
+}
+
+.blueprint-grid .corner-br {
+    bottom: 2rem;
+    right: 2rem;
+    border-left: 0;
+    border-top: 0;
+}
